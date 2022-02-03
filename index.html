@@ -19,16 +19,20 @@
         }
 
         form {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+
             max-width: 1067px;
-            flex-wrap: wrap;
             background-color: rgb(205, 255, 255);
             margin: 10vh;
             box-shadow: 1px 1px 15px rgb(199, 212, 212);
             border-radius: 0 0 10px 10px;
 
+        }
+
+        .form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
         }
 
         h1 {
@@ -58,6 +62,12 @@
         p {
             font-size: 18px;
         }
+
+        .submitbtn{
+            padding: 30px;
+        }
+
+        
     </style>
 
 </head>
@@ -65,77 +75,80 @@
 
 <body>
     <form action="test.html" href="test.html">
+        <div class="form">
+            <div class="textboxinfo" id="introtext">
+                <h1>Knappe oppgave</h1>
+                <p> Prøv å sette farge på siden, stil for overskrift og marger som passer.
+                    Rydd gjerne opp koden, slik at den ser bedre ut. du kan legge inn flere p tagger eller div tagger om
+                    du
+                    vil</p>
+            </div>
 
-        <div class="textbox" id="introtext">
-            <h1>Oppgave</h1>
-            <p> Prøv å sette farge på siden, stil for overskrift og marger som passer.
-                Rydd gjerne opp koden, slik at den ser bedre ut. du kan legge inn flere p tagger eller div tagger om du
-                vil</p>
+            <div class="textbox" id="typename">
+                <h2>Skriv inn fornavn og etternavn</h2>
+                <label for="fname">Fornavn: </label> <br>
+                <input type="text" id="fname" name="fname" required><br><br>
+                <label for="lname">Etternavn: </label> <br>
+                <input type="text" id="lname" name="lname" required><br><br>
+            </div>
+
+            <div class="textbox" id="typeemail">
+                <h2>Skriv inn eposten din</h2>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+
+            </div>
+
+            <div class="textbox" id="typepass">
+                <h2>Skriv inn et passord</h2>
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd" minlength="8" required><br><br>
+            </div>
+
+            <div class="textbox" id="birthdate">
+                <h2>Skriv inn fødelsdatoen din</h2>
+                <label for="birthday">Fødselsdato:</label><br>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+
+            <div class="textbox" id="choosecountry">
+                <h2>Velg landet du liker best</h2>
+                <select name=" velgLand" required>.
+                    <option value="">Velg land</option>
+                    <option value="Polen">Polen</option>
+                    <option value="Italia">Italia</option>
+                    <option value="Hellas">Hellas</option>
+                    <option value="Legoland">Legoland</option>
+                </select>
+
+                <br>
+            </div>
+
+            <div class="textbox" id="choosefavcolor">
+                <!--Vil ha color som reqiured, men da må man bruke JS-->
+                <h2>Velg favorittfargen din</h2>
+                <p>
+                    <label for="favcolor">Select your favorite color:</label>
+                    <input type="color" id="favcolor" name="favcolor"><br><br>
+
+                </p>
+            </div>
+
+            <div class="textbox" id="choosedrink">
+                <h2>Hva ønsker du å drikke til maten?</h2>
+                <input type="radio" value="brus" name="rbDrikke" required><span>Brus</span>
+                <input type="radio" value="brus" name="rbDrikke"><span>Saft</span>
+                <input type="radio" value="brus" name="rbDrikke"><span>Energidrikk</span>
+            </div>
+
         </div>
 
-        <div class="textbox" id="typename">
-            <h2>Skriv inn fornavn først og så etternavn</h2>
-            <label for="fname">Fornavn: </label>
-            <input type="text" id="fname" name="fname" required><br><br>
-            <label for="lname">Etternavn: </label>
-            <input type="text" id="lname" name="lname" required><br><br>
-            <input type="submit" value="Submit">
-        </div>
-
-        <div class="textbox" id="typeemail">
-            <h2>Skriv inn eposten din</h2>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <input type="submit"><br><br>
-        </div>
-
-        <div class="textbox" id="typepass">
-            <h2>Sett inn et passord</h2>
-            <label for="pwd">Password:</label>
-            <input type="password" id="pwd" name="pwd" minlength="8" required><br><br>
+        <div class="submitbtn">
             <input type="submit">
         </div>
 
-        <div class="textbox" id="birthdate">
-            <h2>Skriv inn fødelsdatoen din</h2>
-            <label for="birthday">Fødselsdato:</label>
-            <input type="date" id="birthday" name="birthday" required>
-        </div>
-
-        <div class="textbox" id="choosecountry">
-            <h2>Velg landet du liker best</h2>
-            <select name=" velgLand" required>.
-                <option value="">Velg land</option>
-                <option value="Polen">Polen</option>
-                <option value="Italia">Italia</option>
-                <option value="Hellas">Hellas</option>
-                <option value="Legoland">Legoland</option>
-            </select>
-            <button>OK</button>
-            <br>
-        </div>
-
-        <div class="textbox" id="choosefavcolor">
-            <!--Vil ha color som reqiured, men da må man bruke JS-->
-            <h2>Velg favorittfargen din</h2>
-            <p>
-                <label for="favcolor">Select your favorite color:</label>
-                <input type="color" id="favcolor" name="favcolor"><br><br>
-                <input type="submit">
-            </p>
-        </div>
-
-        <div class="textbox" id="choosedrink">
-            <h2>Hva ønsker du å drikke til maten?</h2>
-
-            <input type="radio" value="brus" name="rbDrikke" required><span>Brus</span>
-            <input type="radio" value="brus" name="rbDrikke"><span>Saft</span>
-            <input type="radio" value="brus" name="rbDrikke"><span>Energidrikk</span>
-
-        </div>
-
     </form>
+
 </body>
 
 </html>
